@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->bigInteger('stock');
+            $table->bigInteger('quantity');
+            $table->bigInteger('price_average');
             $table->timestamps();
         });
     }
