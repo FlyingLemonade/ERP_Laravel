@@ -22,17 +22,17 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', [InventoryController::class, 'showInventoryPage'])
             ->name('index');
 
-        Route::get('/{id}', [InventoryController::class, 'edit'])
-            ->name('detail');
-
-        Route::get('/{id}/edit', [InventoryController::class, 'edit'])
-            ->name('edit');
-
-        Route::post('/', [InventoryController::class, 'showInventoryPage'])
+        Route::get('/create', [InventoryController::class, 'create'])
             ->name('create');
+
+        Route::post('/', [InventoryController::class, 'store'])
+            ->name('store');
 
         Route::put('/{id}', [InventoryController::class, 'update'])
             ->name('update');
+
+        Route::get('/{id}/edit', [InventoryController::class, 'edit'])
+            ->name('edit');
 
         Route::delete('/{id}', [InventoryController::class, 'delete'])
             ->name('destroy');

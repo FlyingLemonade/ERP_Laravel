@@ -13,6 +13,26 @@ class InventoryController extends Controller
         return view('inventory.index', compact('inventoryList'));
     }
 
+    public function create()
+    {
+        return view('inventory.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'quantity' => 'required|integer|min:0',
+            'price_average' => 'required|integer|min:0',
+            'description' => 'required'
+        ]);
+
+        Inventory::create($request->all());
+
+        return redirect()->route('inventory.index')
+            ->with('success', 'Item created successfully.');
+    }
+
     public function edit($id)
     {
         $item = Inventory::findOrFail($id);

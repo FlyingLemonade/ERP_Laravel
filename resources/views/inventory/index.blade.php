@@ -1,6 +1,6 @@
 @extends('layouts.mainbase')
 
-@section('title', 'Dashboard')
+@section('title', 'Inventory')
 @section('content')
 <!-- Stats Cards -->
 @include('components.notification')
@@ -17,12 +17,12 @@
     <div class="bg-white rounded-lg shadow p-6 mb-6">
         <h2 class="text-lg font-semibold text-gray-800 mb-4">Actions</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <button class="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition">
+            <a href="{{ route('inventory.create') }}" class="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition">
                 <div class="p-3 rounded-full bg-blue-100 text-blue-600 mb-2">
                     <i class="fas fa-plus text-lg"></i>
                 </div>
                 <span class="text-sm font-medium text-gray-700">New Items</span>
-            </button>
+            </a>
             <button class="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-200 transition">
                 <div class="p-3 rounded-full bg-green-100 text-green-600 mb-2">
                     <i class="fas fa-user-check text-lg"></i>
