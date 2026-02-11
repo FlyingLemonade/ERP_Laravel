@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('permission_id')->constrained('permissions');
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
 
             #$table->foreign('permission_id')->references('id')->on('permissions');
         });

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('sale_id')->constrained('sales');
             $table->foreignId('inventory_id')->constrained('inventories');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

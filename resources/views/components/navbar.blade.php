@@ -6,7 +6,7 @@
             </button>
             <h1 class="text-xl font-semibold text-gray-800 ml-4">
                 {{ request()->routeIs('dashboard') ? 'Dashboard' : '' }}
-                {{ request()->routeIs('inventory') ? 'Inventory' : '' }}
+                {{ request()->routeIs('inventory.*') ? 'Inventory' : '' }}
                 {{ request()->routeIs('sales') ? 'Sales' : '' }}
                 {{ request()->routeIs('user') ? 'User' : '' }}
                 {{ request()->routeIs('order') ? 'Order' : '' }}

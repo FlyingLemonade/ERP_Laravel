@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('notes');
             $table->foreignId('customer_id')->constrained('customers');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

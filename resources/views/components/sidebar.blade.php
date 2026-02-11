@@ -10,7 +10,7 @@
                         <i class="fas fa-tachometer-alt mr-3"></i>
                         Dashboard
                     </a>
-                    <a href="{{ route('inventory') }}" class="{{ request()->routeIs('inventory') ? 'bg-blue-700' : 'hover:bg-blue-700' }} flex items-center px-4 py-2 text-sm font-medium rounded-md text-white">
+                    <a href="{{ route('inventory.index') }}" class="{{ request()->routeIs('inventory.*') ? 'bg-blue-700' : 'hover:bg-blue-700' }} flex items-center px-4 py-2 text-sm font-medium rounded-md text-white">
                         <i class="fas fa-calendar-check mr-3"></i>
                         Inventory Management
                     </a>

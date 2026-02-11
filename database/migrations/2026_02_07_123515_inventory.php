@@ -18,6 +18,7 @@ return new class extends Migration
             $table->bigInteger('quantity');
             $table->bigInteger('price_average');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
